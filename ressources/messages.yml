@@ -1,0 +1,31 @@
+##########################################################################
+#                JoinAndLeave by Neiyko - Messages file                  #
+#                 Check frequently for plugin updates!                   #
+##########################################################################
+
+#####################
+# Permission System #
+#####################
+permission:
+  no-reload-perm: "&cYou do not have permission to execute this command!"
+
+#####################
+# Classic messages  #
+#####################
+
+reloadComplete: "&cThe plugin has been reloaded in: &a%timerMS% &bms"
+
+#####################
+#  Error  messages  #
+#####################
+reloadError: "&8[&cError&8] &cThe plugin failed to reload"
+
+##################################
+#       JoinAndLeave System      #
+# %rank% shows the player's rank #
+# %player% shows the nickname of #
+# the player and his color       #
+# according to the rank          #
+##################################
+joinMessage: "%rank%%player% &bhas join the server"
+leaveMessage: "%rank%%player% &bhas left the server"

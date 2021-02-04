@@ -1,0 +1,27 @@
+##########################################################################
+#              JoinAndLeave by Neiyko - Configuration file               #
+#                 Check frequently for plugin updates!                   #
+##########################################################################
+
+##################################
+#     Permission plugin used     #
+# Only Luckperms or GroupManager #
+##################################
+permission-plugin: "Luckperms"
+
+#####################
+#    Join System    #
+#####################
+join:
+  enable: true
+
+#####################
+#   Leave  System   #
+#####################
+leave:
+  enable: true
+
+#####################
+# Permission System #
+#####################
+reload-permission: "joinandleave.reload"
