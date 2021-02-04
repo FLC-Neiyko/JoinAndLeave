@@ -20,12 +20,12 @@ public class EonLeave implements Listener {
         Player p = e.getPlayer();
 
         CachedMetaData metaData = luckpermapi.getPlayerAdapter(Player.class).getMetaData(p);
-        String prefix = metaData.getPrefix();
+        String lpPrefix = metaData.getPrefix();
 
         if (main.fileConfigConfiguration.getBoolean("leave.enable")) {
             for (Player players : Bukkit.getOnlinePlayers()) {
                 if (main.getConfig("permission-plugin").equalsIgnoreCase("LuckPerms")) {
-                    players.sendMessage(main.getMessages("leaveMessage").replace("%rank%", prefix)
+                    players.sendMessage(main.getMessages("leaveMessage").replace("%rank%", lpPrefix)
                             .replace("%player%", p.getName()).replace("&", "§"));
                 }
             }
