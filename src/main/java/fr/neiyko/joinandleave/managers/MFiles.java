@@ -1,6 +1,6 @@
 package fr.neiyko.joinandleave.managers;
 
-import fr.neiyko.joinandleave.Main;
+import fr.neiyko.joinandleave.JoinAndLeave;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -11,32 +11,32 @@ import java.util.logging.Level;
 
 public class MFiles {
 
-    private Main main = Main.getInstance();
+    private JoinAndLeave joinAndLeave = JoinAndLeave.getInstance();
 
     public void initFile() {
 
         ressourceSetup("config.yml", true);
-        main.fileConfigConfiguration = YamlConfiguration.loadConfiguration(main.configFile);
+        joinAndLeave.fileConfigConfiguration = YamlConfiguration.loadConfiguration(joinAndLeave.configFile);
 
         ressourceSetup("messages.yml", true);
-        main.fileConfigMessages = YamlConfiguration.loadConfiguration(main.messagesFile);
+        joinAndLeave.fileConfigMessages = YamlConfiguration.loadConfiguration(joinAndLeave.messagesFile);
 
     }
 
     public void ressourceSetup(String fileName, boolean reset) {
-        InputStream in = main.getResource((fileName));
+        InputStream in = joinAndLeave.getResource((fileName));
 
         if (in == null) {
             throw new IllegalArgumentException("The '" + fileName + "' resource was not found !");
         }
 
-        File outDir = new File(main.getDataFolder(), "");
+        File outDir = new File(joinAndLeave.getDataFolder(), "");
         if (!outDir.exists()) {
             outDir.mkdirs();
         }
         String fileNameString = fileName.toLowerCase();
         if (fileNameString.equals("config.yml") || fileName.equals("messages.yml")) {
-            File outFile = new File(main.getDataFolder(), fileName);
+            File outFile = new File(joinAndLeave.getDataFolder(), fileName);
             if (!outFile.exists()) {
                 try {
                     OutputStream out = new FileOutputStream(outFile);
@@ -49,7 +49,7 @@ public class MFiles {
                     in.close();
                     return;
                 } catch (Exception e) {
-                    main.logConsole(Level.WARNING, "The '" + fileName + "' was not found !");
+                    joinAndLeave.logConsole(Level.WARNING, "The '" + fileName + "' was not found !");
                 }
             }
         }

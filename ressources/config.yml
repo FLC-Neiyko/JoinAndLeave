@@ -3,12 +3,6 @@
 #                 Check frequently for plugin updates!                   #
 ##########################################################################
 
-##################################
-#     Permission plugin used     #
-# Only Luckperms or GroupManager #
-##################################
-permission-plugin: "Luckperms"
-
 #####################
 #    Join System    #
 #####################

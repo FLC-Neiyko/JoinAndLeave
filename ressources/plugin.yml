@@ -1,6 +1,6 @@
 name: JoinAndLeave
 version: 1.0.0
-main: fr.neiyko.joinandleave.Main
+main: fr.neiyko.joinandleave.JoinAndLeave
 author: Neiyko
 description: Plugin allowing to have a message when a player joins or leaves the server
 depend:
