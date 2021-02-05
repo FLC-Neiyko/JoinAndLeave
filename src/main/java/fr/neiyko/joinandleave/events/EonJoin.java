@@ -21,5 +21,12 @@ public class EonJoin implements Listener {
             e.setJoinMessage(joinAndLeave.getMessages("joinMessage").replace("%rank%", prefix)
             .replace("%player%", p.getName()).replace("&", "§"));
         }
+
+        if (!p.hasPlayedBefore()){
+            if (joinAndLeave.fileConfigConfiguration.getBoolean("first-join.enable")) {
+                e.setJoinMessage(joinAndLeave.getMessages("firstJoinMessage").replace("%rank%", prefix)
+                .replace("%player%", p.getName()).replace("&", "§"));
+            }
+        }
     }
 }

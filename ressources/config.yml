@@ -15,6 +15,12 @@ join:
 leave:
   enable: true
 
+##################
+#   First Join   #
+##################
+first-join:
+  enable: true
+
 #####################
 # Permission System #
 #####################

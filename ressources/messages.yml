@@ -29,3 +29,4 @@ reloadError: "&8[&cError&8] &cThe plugin failed to reload"
 ##################################
 joinMessage: "%rank%%player% &bhas join the server"
 leaveMessage: "%rank%%player% &bhas left the server"
+firstJoinMessage: "&bWelcome %rank%%player% &bon the server !"
