@@ -3,8 +3,8 @@ version: 1.0.0
 main: fr.neiyko.joinandleave.Main
 author: Neiyko
 description: Plugin allowing to have a message when a player joins or leaves the server
-softdepend:
-  - LuckPerms
+depend:
+  - Vault
 commands:
   jalreload:
     description: Used to reload the plugin

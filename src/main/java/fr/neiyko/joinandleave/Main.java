@@ -18,6 +18,7 @@ public final class Main extends JavaPlugin {
     private MEvents eventsManager;
     private MCommands commandsManager;
     private MFiles fileManager;
+    private boolean error;
 
     public static Main getInstance() {
         return instance;
@@ -81,5 +82,13 @@ public final class Main extends JavaPlugin {
             return true;
         }
         return false;
+    }
+
+    public void setError(boolean status) {
+        error = status;
+    }
+
+    public boolean getError() {
+        return error;
     }
 }
