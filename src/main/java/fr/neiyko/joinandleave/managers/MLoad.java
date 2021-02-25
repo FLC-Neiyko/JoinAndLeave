@@ -27,7 +27,6 @@ public class MLoad {
             joinAndLeave.setError(true);
         }
 
-
         joinAndLeave.getCommandsManager().initCommands();
         joinAndLeave.getEventsManager().initEvents();
         joinAndLeave.getFileManager().initFile();
@@ -36,7 +35,7 @@ public class MLoad {
         if (joinAndLeave.getError()) errorMSG();
 
         long end_timer = System.currentTimeMillis();
-        joinAndLeave.logConsole(Level.INFO, "Loading completed in " + (start_timer-end_timer) + " ms");
+        joinAndLeave.logConsole(Level.INFO, "Loading completed in " + (end_timer-start_timer) + " ms");
         pluginEnable();
     }
 

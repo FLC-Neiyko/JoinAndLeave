@@ -77,10 +77,6 @@ public final class JoinAndLeave extends JavaPlugin {
         return fileConfigConfiguration.getString(perm);
     }
 
-    public String getConfig(String config) {
-        return fileConfigConfiguration.getString(config);
-    }
-
     public String getMessages(String msg) {
         return fileConfigMessages.getString(msg);
     }
@@ -103,13 +99,13 @@ public final class JoinAndLeave extends JavaPlugin {
     private boolean setupChat() {
         RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
         chat = rsp.getProvider();
-        return chat != null;
+        return perms != null;
     }
 
     private boolean setupPermissions() {
         RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
         perms = rsp.getProvider();
-        return perms != null;
+        return true;
     }
 
     public static Permission getPerms() {
